@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employee Form"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+     <TableRow>
+        <TextView
+                android:layout_marginTop="10dp"
+                android:text="Name: "
+                android:textSize="25dp"
+        />
+         <EditText
+                 android:id="@+id/empName"
+                 android:inputType="text"
+                 android:layout_width="245dp"
+                 android:layout_height="match_parent"
+         />
+    </TableRow>
+        <TableRow>
+            <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="Gender"
+                    android:textSize="25dp"
+            />
+            <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                <RadioButton
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/male"
+                        android:layout_width="92dp"
+                        android:layout_height="52dp"
+                        android:textSize="20sp"
+                        android:text="Male"
+                />
+
+                <RadioButton
+                        android:id="@+id/female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:textSize="20sp"
+                />
+
+            </RadioGroup>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="E-mail: "
+                    android:textSize="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+            <EditText
+                    android:id="@+id/empMail"
+                    android:inputType="text"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+            />
+        </TableRow>
+        <TableRow>
+        <TextView
+                android:layout_marginTop="10dp"
+                android:text="Salary: "
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        />
+        <EditText
+                android:id="@+id/empSal"
+                android:inputType="text"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+        />
+        </TableRow>
+
+
+
+    </TableLayout>
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+        <Button
+                android:layout_marginTop="20dp"
+
+                android:id="@+id/send"
+                android:onClick="sendData"
+                android:text="Send Data"
+                android:background="@android:color/holo_blue_dark"
+                android:layout_height="wrap_content"
+                android:layout_width="169dp"
+        />
+        <Button
+                android:layout_marginTop="20dp"
+
+                android:id="@+id/resetA"
+                android:onClick="reset"
+                android:layout_marginLeft="20dp"
+                android:text="Reset"
+                android:background="@android:color/holo_blue_bright"
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>
